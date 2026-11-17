@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba1swixmyhqui"]
+
+[ext_resource type="Script" path="res://levels/levels/maingame4/plant_spot.gd" id="1_n21dr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0nkry"]
+size = Vector2(256, 256)
+
+[node name="PlantSpot" type="ColorRect"]
+offset_left = 2048.0
+offset_top = 4352.0
+offset_right = 2304.0
+offset_bottom = 4608.0
+color = Color(0.512384, 0.18047, 0.235578, 1)
+script = ExtResource("1_n21dr")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(128, 128)
+shape = SubResource("RectangleShape2D_0nkry")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

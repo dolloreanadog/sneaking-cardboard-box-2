@@ -1,0 +1,2693 @@
+[gd_scene load_steps=15 format=3 uid="uid://c3o6exeappy15"]
+
+[ext_resource type="Script" path="res://levels/levels/maingame/MainGame.gd" id="1_874p1"]
+[ext_resource type="PackedScene" uid="uid://bk4yu8ood4k8c" path="res://levels/levels/maingame2/MainGame2.tscn" id="2_3chb6"]
+[ext_resource type="PackedScene" uid="uid://bqjv57ddfflob" path="res://objects/player/Player.tscn" id="2_6j61m"]
+[ext_resource type="Texture2D" uid="uid://d0jjruxjktgg5" path="res://assets/darktile.png" id="2_87i1u"]
+[ext_resource type="PackedScene" uid="uid://b544584uahnq1" path="res://objects/light/Light.tscn" id="3_j2pc6"]
+[ext_resource type="AudioStream" uid="uid://dcl4il061sjw2" path="res://assets/CircuitBreaker1.wav" id="6_cplcb"]
+
+[sub_resource type="Theme" id="Theme_65hkv"]
+GridContainer/constants/h_separation = 0
+GridContainer/constants/v_separation = 0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_amvus"]
+size = Vector2(5688, 592)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6xhs3"]
+size = Vector2(5728, 552)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cthpg"]
+size = Vector2(440, 776)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eeb21"]
+size = Vector2(64, 776)
+
+[sub_resource type="Animation" id="Animation_p0cfr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Light:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-672, -288)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Light2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-672, -96)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Light3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-672, 96)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Light4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-672, 288)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Light5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4000, -288)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Light6:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4000, -96)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Light7:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4000, 96)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Light8:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4000, 288)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("DynamicLights/Light:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(768, -544)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("DynamicLights/Light2:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1664, -544)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("DynamicLights/Light3:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2408, -544)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("DynamicLights/Light4:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3200, -544)]
+}
+
+[sub_resource type="Animation" id="Animation_hxogu"]
+resource_name = "standard"
+length = 20.0
+loop_mode = 1
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Light:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10, 20),
+"transitions": PackedFloat32Array(0.5, -2, 1),
+"update": 0,
+"values": [Vector2(-672, -288), Vector2(4000, -288), Vector2(-672, -288)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Light2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 10, 20),
+"transitions": PackedFloat32Array(0.5, -2, 1),
+"update": 0,
+"values": [Vector2(-672, -96), Vector2(4000, -96), Vector2(-672, -96)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Light3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 10, 20),
+"transitions": PackedFloat32Array(0.5, -2, 1),
+"update": 0,
+"values": [Vector2(-672, 96), Vector2(4000, 96), Vector2(-672, 96)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Light4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 10, 20),
+"transitions": PackedFloat32Array(0.5, -2, 1),
+"update": 0,
+"values": [Vector2(-672, 288), Vector2(4000, 288), Vector2(-672, 288)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Light5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 10, 20),
+"transitions": PackedFloat32Array(0.5, -2, 1),
+"update": 0,
+"values": [Vector2(4000, -288), Vector2(-672, -288), Vector2(4000, -288)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Light6:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 10, 20),
+"transitions": PackedFloat32Array(0.5, -2, 1),
+"update": 0,
+"values": [Vector2(4000, -96), Vector2(-672, -96), Vector2(4000, -96)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Light7:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 10, 20),
+"transitions": PackedFloat32Array(0.5, -2, 1),
+"update": 0,
+"values": [Vector2(4000, 96), Vector2(-672, 96), Vector2(4000, 96)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Light8:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 10, 20),
+"transitions": PackedFloat32Array(0.5, -2, 1),
+"update": 0,
+"values": [Vector2(4000, 288), Vector2(-672, 288), Vector2(4000, 288)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("DynamicLights/Light:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 5, 20),
+"transitions": PackedFloat32Array(0.5, -2, 1),
+"update": 0,
+"values": [Vector2(768, -544), Vector2(768, 544), Vector2(768, -544)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("DynamicLights/Light2:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 7, 20),
+"transitions": PackedFloat32Array(0.5, -2, 1),
+"update": 0,
+"values": [Vector2(1664, -544), Vector2(1664, 544), Vector2(1664, -544)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("DynamicLights/Light3:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 6, 20),
+"transitions": PackedFloat32Array(0.5, -2, 1),
+"update": 0,
+"values": [Vector2(2408, -544), Vector2(2408, 544), Vector2(2408, -544)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("DynamicLights/Light4:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 3, 20),
+"transitions": PackedFloat32Array(0.5, -2, 1),
+"update": 0,
+"values": [Vector2(3200, -544), Vector2(3200, 544), Vector2(3200, -544)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3pd7o"]
+_data = {
+"RESET": SubResource("Animation_p0cfr"),
+"standard": SubResource("Animation_hxogu")
+}
+
+[node name="MainGame" type="Node2D"]
+script = ExtResource("1_874p1")
+nextScene = ExtResource("2_3chb6")
+
+[node name="Visual" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GridContainer" type="GridContainer" parent="Visual"]
+layout_mode = 0
+offset_left = -1216.0
+offset_top = -728.0
+offset_right = 4416.0
+offset_bottom = 808.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 44
+
+[node name="Darktile" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile46" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile47" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile48" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile49" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile50" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile51" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile52" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile53" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile54" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile10" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile11" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile12" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile13" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile14" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile15" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile16" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile17" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile18" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile19" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile20" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile21" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile22" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile23" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile24" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile25" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile26" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile27" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile28" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile29" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile30" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile31" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile32" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile33" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile34" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile35" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile36" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile37" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile38" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile39" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile40" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile41" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile42" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile43" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile44" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile45" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+theme = SubResource("Theme_65hkv")
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile7" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile8" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile9" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile2" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile3" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile4" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile5" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile6" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile55" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile56" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile57" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile58" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile59" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile60" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile61" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile62" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile63" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile64" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile65" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile66" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile67" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile68" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile69" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile70" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile71" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile72" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile73" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile74" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile75" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile76" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile77" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile78" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile79" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile80" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile81" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile82" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile83" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile84" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile85" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile86" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile87" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile88" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile89" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile90" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile91" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile92" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile93" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile94" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile95" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile96" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile97" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile98" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile99" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile100" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+theme = SubResource("Theme_65hkv")
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile101" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile102" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile103" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile104" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile105" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile106" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile107" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile108" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile109" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile110" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile111" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile112" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile113" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile114" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile115" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile116" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile117" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile118" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile119" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile120" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile121" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile122" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile123" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile124" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile125" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile126" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile127" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile128" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile129" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile130" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile131" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile132" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile133" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile134" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile135" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile136" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile137" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile138" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile139" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile140" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile141" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile142" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile143" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile144" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile145" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile146" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile147" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile148" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile149" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile150" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile151" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile152" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile153" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile154" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+theme = SubResource("Theme_65hkv")
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile155" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile156" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile157" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile158" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile159" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile160" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile161" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile162" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile163" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile164" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile165" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile166" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile167" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile168" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile169" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile170" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile171" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile172" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile173" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile174" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile175" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile176" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile177" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile178" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile179" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile180" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile181" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile182" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile183" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile184" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile185" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile186" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile187" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile188" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile189" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile190" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile191" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile192" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile193" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile194" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile195" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile196" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile197" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile198" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile199" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile200" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile201" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile202" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile203" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile204" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile205" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile206" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile207" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile208" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+theme = SubResource("Theme_65hkv")
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile209" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile210" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile211" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile212" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile213" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile214" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile215" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile216" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile217" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile218" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile219" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile220" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile221" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile222" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile223" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile224" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile225" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile226" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile227" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile228" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile229" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile230" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile231" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile232" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile233" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile234" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile235" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile236" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile237" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile238" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile239" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile240" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile241" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile242" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile243" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile244" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile245" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile246" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile247" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile248" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile249" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile250" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile251" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile252" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile253" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile254" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile255" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile256" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile257" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile258" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile259" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile260" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile261" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile262" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+theme = SubResource("Theme_65hkv")
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile263" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile264" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile265" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile266" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile267" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile268" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile269" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile270" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile271" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile272" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile273" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile274" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile275" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile276" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile277" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile278" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile279" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile280" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile281" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile282" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile283" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile284" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile285" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile286" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile287" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile288" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile289" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile290" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile291" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile292" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile293" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile294" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile295" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile296" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile297" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile298" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile299" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile300" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile301" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile302" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile303" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile304" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile305" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile306" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile307" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile308" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile309" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile310" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile311" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile312" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile313" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile314" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile315" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile316" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+theme = SubResource("Theme_65hkv")
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile317" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile318" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile319" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile320" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile321" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile322" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile323" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile324" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile325" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile326" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile327" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile328" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile329" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile330" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile331" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile332" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile333" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile334" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile335" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile336" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile337" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile338" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile339" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile340" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile341" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile342" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile343" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile344" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile345" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile346" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile347" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile348" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile349" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile350" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile351" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile352" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile353" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile354" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile355" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile356" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile357" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile358" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile359" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile360" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile361" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile362" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile363" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile364" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile365" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile366" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile367" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile368" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile369" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile370" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+theme = SubResource("Theme_65hkv")
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile371" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile372" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile373" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile374" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile375" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile376" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile377" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile378" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile379" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile380" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile381" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile382" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile383" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile384" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile385" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile386" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile387" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile388" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile389" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile390" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile391" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile392" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile393" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile394" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile395" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile396" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile397" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile398" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile399" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile400" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile401" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile402" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile403" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile404" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile405" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile406" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile407" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile408" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile409" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile410" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile411" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile412" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile413" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile414" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile415" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile416" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile417" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile418" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile419" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile420" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile421" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile422" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile423" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile424" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+theme = SubResource("Theme_65hkv")
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile425" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile426" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile427" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile428" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile429" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile430" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile431" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile432" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile433" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile434" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile435" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile436" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile437" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile438" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile439" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile440" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile441" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile442" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile443" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile444" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile445" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile446" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile447" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile448" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile449" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile450" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile451" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile452" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile453" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile454" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile455" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile456" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile457" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile458" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile459" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile460" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile461" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile462" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile463" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile464" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile465" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile466" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile467" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile468" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile469" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile470" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile471" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile472" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile473" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile474" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile475" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile476" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile477" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile478" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile479" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile480" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile481" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile482" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile483" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile484" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile485" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile486" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile487" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile488" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile489" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile490" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile491" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile492" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile493" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile494" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile495" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile496" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile497" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile498" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile499" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile500" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile501" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile502" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile503" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile504" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile505" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile506" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile507" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile508" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile509" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile510" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile511" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile512" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile513" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile514" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile515" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile516" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile517" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile518" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile519" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile520" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile521" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile522" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile523" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile524" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile525" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile526" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile527" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="Darktile528" type="TextureRect" parent="Visual/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_87i1u")
+
+[node name="ColorRect2" type="Label" parent="."]
+offset_left = 256.0
+offset_top = -383.0
+offset_right = 1023.0
+offset_bottom = -343.0
+rotation = 1.5708
+text = "Good Luck!"
+horizontal_alignment = 1
+
+[node name="Player" parent="." instance=ExtResource("2_6j61m")]
+
+[node name="WallGroup" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="WallGroup"]
+offset_left = -1208.0
+offset_top = -984.0
+offset_right = 4480.0
+offset_bottom = -384.0
+color = Color(0, 0, 0, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallGroup/ColorRect"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallGroup/ColorRect/StaticBody2D"]
+position = Vector2(2844, 296)
+shape = SubResource("RectangleShape2D_amvus")
+
+[node name="ColorRect2" type="ColorRect" parent="WallGroup"]
+offset_left = -1208.0
+offset_top = 384.0
+offset_right = 4512.0
+offset_bottom = 936.0
+color = Color(0, 0, 0, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallGroup/ColorRect2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallGroup/ColorRect2/StaticBody2D"]
+position = Vector2(2864, 276)
+shape = SubResource("RectangleShape2D_6xhs3")
+
+[node name="ColorRect3" type="ColorRect" parent="WallGroup"]
+offset_left = -1208.0
+offset_top = -384.0
+offset_right = -768.0
+offset_bottom = 384.0
+color = Color(0, 0, 0, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="WallGroup/ColorRect3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallGroup/ColorRect3/StaticBody2D"]
+position = Vector2(220, 380)
+shape = SubResource("RectangleShape2D_cthpg")
+
+[node name="ColorRect4" type="ColorRect" parent="WallGroup"]
+offset_left = 4096.0
+offset_top = -384.0
+offset_right = 4160.0
+offset_bottom = 384.0
+color = Color(4.81308e-06, 0, 0.951465, 1)
+
+[node name="Area2D" type="Area2D" parent="WallGroup/ColorRect4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallGroup/ColorRect4/Area2D"]
+position = Vector2(32, 384)
+shape = SubResource("RectangleShape2D_eeb21")
+
+[node name="LightGroup" type="Node2D" parent="."]
+
+[node name="Light" parent="LightGroup" instance=ExtResource("3_j2pc6")]
+position = Vector2(-672, -288)
+
+[node name="Light2" parent="LightGroup" instance=ExtResource("3_j2pc6")]
+position = Vector2(-672, -96)
+
+[node name="Light3" parent="LightGroup" instance=ExtResource("3_j2pc6")]
+position = Vector2(-672, 96)
+
+[node name="Light4" parent="LightGroup" instance=ExtResource("3_j2pc6")]
+position = Vector2(-672, 288)
+
+[node name="Light5" parent="LightGroup" instance=ExtResource("3_j2pc6")]
+position = Vector2(4000, -288)
+
+[node name="Light6" parent="LightGroup" instance=ExtResource("3_j2pc6")]
+position = Vector2(4000, -96)
+
+[node name="Light7" parent="LightGroup" instance=ExtResource("3_j2pc6")]
+position = Vector2(4000, 96)
+
+[node name="Light8" parent="LightGroup" instance=ExtResource("3_j2pc6")]
+position = Vector2(4000, 288)
+
+[node name="StaticLights" type="Node2D" parent="LightGroup"]
+
+[node name="Light" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(1096, -280)
+
+[node name="Light19" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(1128, -56)
+
+[node name="Light20" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(824, -168)
+
+[node name="Light21" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(1032, 176)
+
+[node name="Light22" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(1656, -248)
+
+[node name="Light23" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(1488, 96)
+
+[node name="Light24" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(1928, 216)
+
+[node name="Light25" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(1680, 256)
+
+[node name="Light26" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(2096, -8)
+
+[node name="Light27" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(2360, -88)
+
+[node name="Light28" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(2432, 176)
+
+[node name="Light29" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(2976, 208)
+
+[node name="Light30" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(3144, -48)
+
+[node name="Light31" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(2824, -232)
+
+[node name="Light32" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(3344, -248)
+
+[node name="Light33" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(3592, 120)
+
+[node name="Light34" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(3752, -264)
+
+[node name="Light2" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(1376, 288)
+
+[node name="Light3" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(1416, -120)
+
+[node name="Light4" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(736, 96)
+
+[node name="Light18" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(-336, 208)
+
+[node name="Light5" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(1904, -200)
+
+[node name="Light6" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(392, -200)
+
+[node name="Light7" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(1728, 32)
+
+[node name="Light8" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(2200, 264)
+
+[node name="Light9" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(2192, -256)
+
+[node name="Light10" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(2592, -264)
+
+[node name="Light11" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(2592, -56)
+
+[node name="Light12" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(2720, 128)
+
+[node name="Light13" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(2912, -16)
+
+[node name="Light14" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(3048, -248)
+
+[node name="Light15" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(3344, 248)
+
+[node name="Light16" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(3360, 16)
+
+[node name="Light17" parent="LightGroup/StaticLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(3576, -104)
+
+[node name="DynamicLights" type="Node2D" parent="LightGroup"]
+
+[node name="Light" parent="LightGroup/DynamicLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(768, -544)
+
+[node name="Light2" parent="LightGroup/DynamicLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(1664, -544)
+
+[node name="Light3" parent="LightGroup/DynamicLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(2408, -544)
+
+[node name="Light4" parent="LightGroup/DynamicLights" instance=ExtResource("3_j2pc6")]
+position = Vector2(3200, -544)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LightGroup"]
+libraries = {
+"": SubResource("AnimationLibrary_3pd7o")
+}
+autoplay = "standard"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
+[node name="CircuitBreaker1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_cplcb")
+volume_db = 5.0
+
+[connection signal="body_entered" from="WallGroup/ColorRect4/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

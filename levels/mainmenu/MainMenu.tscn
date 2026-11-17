@@ -1,0 +1,306 @@
+[gd_scene load_steps=4 format=3 uid="uid://b78ojpmk06hqv"]
+
+[ext_resource type="Script" path="res://levels/mainmenu/MainMenu.gd" id="1_kugtm"]
+[ext_resource type="Texture2D" uid="uid://d0jjruxjktgg5" path="res://assets/darktile.png" id="2_m3hrj"]
+
+[sub_resource type="Theme" id="Theme_6yasq"]
+GridContainer/constants/h_separation = 0
+GridContainer/constants/v_separation = 0
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kugtm")
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GridContainer" type="GridContainer" parent="Control"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 9
+
+[node name="Darktile" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile10" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile11" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile12" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile13" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile14" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile15" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile16" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile17" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile18" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile19" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile20" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile21" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile22" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile23" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile24" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile25" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile26" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile27" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile28" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile29" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile30" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile31" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile32" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile33" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile34" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile35" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile36" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile37" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile38" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile39" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile40" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile41" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile42" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile43" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile44" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile45" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+theme = SubResource("Theme_6yasq")
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile7" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile8" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile9" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile2" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile3" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile4" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile5" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="Darktile6" type="TextureRect" parent="Control/GridContainer"]
+layout_mode = 2
+texture = ExtResource("2_m3hrj")
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 940.0
+offset_top = -4.0
+offset_right = 1116.0
+offset_bottom = 236.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.952536, 0.609931, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 960.0
+offset_top = 16.0
+offset_right = 1136.0
+offset_bottom = 576.0
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="ControlsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Controls"
+
+[node name="StoryButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Story"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 609.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 50
+text = "Sneaking Cardboard Box 2"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 80.0
+offset_right = 609.0
+offset_bottom = 149.0
+theme_override_font_sizes/font_size = 25
+text = "By Carl Cortez"
+
+[node name="ControlsPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 128.0
+offset_right = 952.0
+offset_bottom = 640.0
+
+[node name="Label" type="Label" parent="ControlsPanel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 480.0
+offset_bottom = 96.0
+text = "W, A, S, D to move
+
+Don't move when light is shown on you."
+
+[node name="StoryPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 8.0
+offset_top = 128.0
+offset_right = 952.0
+offset_bottom = 640.0
+
+[node name="Label" type="Label" parent="StoryPanel"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 480.0
+offset_bottom = 96.0
+text = "You are sneaking in the facility to blow up new superweapons."
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ControlsButton" to="." method="_on_controls_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/StoryButton" to="." method="_on_story_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

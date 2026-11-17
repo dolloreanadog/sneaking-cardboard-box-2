@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b544584uahnq1"]
+
+[ext_resource type="Script" path="res://objects/light/Light.gd" id="1_f7hgp"]
+[ext_resource type="Texture2D" uid="uid://chmvdkkjqkiqm" path="res://assets/Circle.png" id="1_hr27c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ajslf"]
+radius = 88.0
+
+[node name="Light" type="Area2D"]
+script = ExtResource("1_f7hgp")
+
+[node name="Circle" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.568627)
+scale = Vector2(3, 3)
+texture = ExtResource("1_hr27c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ajslf")
